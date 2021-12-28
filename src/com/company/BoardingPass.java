@@ -1,5 +1,9 @@
 package com.company;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Date;
 import java.util.UUID;
 
@@ -74,5 +78,18 @@ public class BoardingPass {
 
     public String generatePassNumber(){
         return UUID.randomUUID().toString();
+    }
+
+    public int writeToFile(String path) throws IOException {
+        int result = 0;
+        try{
+            Files.write(Paths.get(path), "".getBytes());
+        }
+        catch(Exception ex){
+            result = -1;
+            System.out.println(ex);
+        }
+
+        return result;
     }
 }
