@@ -15,9 +15,19 @@ public class BoardingPass {
     private String eta;
     private String departureTime;
     private Passenger passenger;
+    private double ticketPrice;
 
-    public BoardingPass() {
+    public BoardingPass(Passenger passenger) {
+        this.passenger = passenger;
         setPassNumber(generatePassNumber());
+    }
+
+    public double getTicketPrice() {
+        return ticketPrice;
+    }
+
+    public void setTicketPrice(double ticketPrice) {
+        this.ticketPrice = ticketPrice;
     }
 
     public Passenger getPassenger() {
@@ -80,10 +90,10 @@ public class BoardingPass {
         return UUID.randomUUID().toString();
     }
 
-    public int writeToFile(String path) throws IOException {
+    public int writeToFile(String path, StringBuilder data) throws IOException {
         int result = 0;
         try{
-            Files.write(Paths.get(path), "".getBytes());
+            Files.write(Paths.get(path), data.toString().getBytes());
         }
         catch(Exception ex){
             result = -1;
@@ -91,5 +101,21 @@ public class BoardingPass {
         }
 
         return result;
+    }
+
+    public double GenerateTicketPrice(){
+        if(getPassenger().getAge() <= 12){
+            setTicketPrice(getTicketPrice() - (getTicketPrice() * 0.5));
+        }
+
+        if(getPassenger().getAge() >= 60){
+            setTicketPrice(getTicketPrice() - (getTicketPrice() * 0.6));
+        }
+
+        if(getPassenger().getGender() == "Female"){
+            setTicketPrice(getTicketPrice() - (getTicketPrice() * 0.25));
+        }
+
+        return getTicketPrice();
     }
 }
