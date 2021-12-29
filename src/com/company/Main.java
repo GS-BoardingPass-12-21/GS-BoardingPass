@@ -35,5 +35,6 @@ public class Main {
 
         //TODO: Generate and save the pass
         bp.generateDataFile();
+        bp.readDataFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\data.txt");
     }
 }

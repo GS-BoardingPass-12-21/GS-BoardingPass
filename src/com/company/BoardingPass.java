@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 public class BoardingPass {
@@ -22,6 +24,11 @@ public class BoardingPass {
         this.ticketPrice = 50.00;
         setPassNumber(generatePassNumber());
         setEta(generateETA());
+        setTicketPrice(generateTicketPrice());
+        this.departureTime = "11:00 AM";
+        this.date = new Date();
+        this.destination = "Erie, PA";
+        this.origin = "Buffalo, NY";
     }
 
     public double getTicketPrice() {
@@ -105,7 +112,40 @@ public class BoardingPass {
         return result;
     }
 
-    public double GenerateTicketPrice(){
+    public int readDataFile(String path) throws IOException {
+        int result = 0;
+        List<String> lines = new ArrayList<>();
+
+        try{
+            lines = Files.readAllLines(Paths.get(path));
+
+            StringBuilder ticket = generateTicket(lines);
+
+            writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\ticket.txt", ticket);
+        }
+        catch(Exception ex){
+            result = -1;
+            System.out.println(ex);
+        }
+
+        return result;
+    }
+
+    public StringBuilder generateTicket(List<String> ticketData){
+        StringBuilder ticketSb = new StringBuilder();
+
+        ticketSb.append("***********************************************\r\n");
+
+        for(String ticketLine: ticketData){
+            ticketSb.append(String.format("* %s            \r\n", ticketLine));
+        }
+
+        ticketSb.append("***********************************************");
+
+        return ticketSb;
+    }
+
+    public double generateTicketPrice(){
         if(getPassenger().getAge() <= 12){
             setTicketPrice(getTicketPrice() - (getTicketPrice() * 0.5));
         }
@@ -122,7 +162,7 @@ public class BoardingPass {
     }
 
     public String generateETA(){
-        return "12PM";
+        return "12:00 PM";
     }
 
     public void generateDataFile() throws IOException {
