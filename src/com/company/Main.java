@@ -1,10 +1,11 @@
 package com.company;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 	// write your code here
         Passenger passenger1 = new Passenger();
 
@@ -33,5 +34,6 @@ public class Main {
         BoardingPass bp = new BoardingPass(passenger1);
 
         //TODO: Generate and save the pass
+        bp.generateDataFile();
     }
 }

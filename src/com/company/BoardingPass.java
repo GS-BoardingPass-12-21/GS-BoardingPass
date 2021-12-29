@@ -19,7 +19,9 @@ public class BoardingPass {
 
     public BoardingPass(Passenger passenger) {
         this.passenger = passenger;
+        this.ticketPrice = 50.00;
         setPassNumber(generatePassNumber());
+        setEta(generateETA());
     }
 
     public double getTicketPrice() {
@@ -117,5 +119,27 @@ public class BoardingPass {
         }
 
         return getTicketPrice();
+    }
+
+    public String generateETA(){
+        return "12PM";
+    }
+
+    public void generateDataFile() throws IOException {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getPassNumber() + "\r\n");
+        sb.append(getDate() + "\r\n");
+        sb.append(getPassenger().getName() + "\r\n");
+        sb.append(getPassenger().getAge() + "\r\n");
+        sb.append(getPassenger().getGender() + "\r\n");
+        sb.append(getPassenger().getEmail() + "\r\n");
+        sb.append(getPassenger().getPhone() + "\r\n");
+        sb.append(getOrigin() + "\r\n");
+        sb.append(getDestination() + "\r\n");
+        sb.append(getDepartureTime() + "\r\n");
+        sb.append(getEta() + "\r\n");
+        sb.append(getTicketPrice() + "\r\n");
+
+        writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\data.txt", sb);
     }
 }
