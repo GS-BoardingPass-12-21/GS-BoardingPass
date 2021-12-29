@@ -168,7 +168,7 @@ public class BoardingPass {
     public void generateDataFile() throws IOException {
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("Ticket Number: %s             Date: %s\r\n", getPassNumber(), getDate()));
-        sb.append(String.format("Name: %s                      Age: %o\r\n", getPassenger().getName(), getPassenger().getAge()));
+        sb.append(String.format("Name: %s                      Age: %s\r\n", getPassenger().getName(), getPassenger().getAge()));
         sb.append(String.format("Gender: %s                    Email: %s\r\n", getPassenger().getGender(), getPassenger().getEmail()));
         sb.append(String.format("Phone: %s\r\n", getPassenger().getPhone()));
         sb.append(String.format("Origin: %s                    Destination: %s\r\n", getOrigin(), getDestination()));
