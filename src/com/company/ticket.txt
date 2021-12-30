@@ -1,5 +1,5 @@
 ***********************************************
-* Ticket Number: c8f0a8b0-bc0f-40fa-bf25-9a242b2b05ca             Date: Wed Dec 29 10:18:47 EST 2021            
+* Ticket Number: b6a9231d-74c2-43f0-952f-6b3725f00ebc             Date: Thu Dec 30 08:59:46 EST 2021            
 * Name: Darren                      Age: 10            
 * Gender: Male                    Email: darrentebo83@outlook.com            
 * Phone: 814-464-1587            
@@ -7,3 +7,14 @@
 * Departure Time: 11:00 AM            ETA: 12:00 PM            
 * Price: 25.0            
 ***********************************************
+
+***********************************************
+* Ticket Number: ce8b5b71-03b1-43f7-a137-1a2f5fc064fb             Date: Thu Dec 30 09:00:43 EST 2021            
+* Name: Darren                      Age: 60            
+* Gender: Male                    Email: darren@test.com            
+* Phone: 188-321-1234            
+* Origin: Buffalo, NY                    Destination: Erie, PA            
+* Departure Time: 11:00 AM            ETA: 12:00 PM            
+* Price: 20.0            
+***********************************************
+

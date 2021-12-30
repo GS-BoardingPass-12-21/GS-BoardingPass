@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -99,10 +100,15 @@ public class BoardingPass {
         return UUID.randomUUID().toString();
     }
 
-    public int writeToFile(String path, StringBuilder data) throws IOException {
+    public int writeToFile(String path, StringBuilder data, boolean append) throws IOException {
         int result = 0;
         try{
-            Files.write(Paths.get(path), data.toString().getBytes());
+            if(append){
+                Files.write(Paths.get(path), data.toString().getBytes(), StandardOpenOption.APPEND);
+            }
+            else{
+                Files.write(Paths.get(path), data.toString().getBytes());
+            }
         }
         catch(Exception ex){
             result = -1;
@@ -121,7 +127,7 @@ public class BoardingPass {
 
             StringBuilder ticket = generateTicket(lines);
 
-            writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\ticket.txt", ticket);
+            writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\ticket.txt", ticket, true);
         }
         catch(Exception ex){
             result = -1;
@@ -140,7 +146,7 @@ public class BoardingPass {
             ticketSb.append(String.format("* %s            \r\n", ticketLine));
         }
 
-        ticketSb.append("***********************************************");
+        ticketSb.append("***********************************************\r\n\r\n");
 
         return ticketSb;
     }
@@ -175,6 +181,6 @@ public class BoardingPass {
         sb.append(String.format("Departure Time: %s            ETA: %s\r\n", getDepartureTime(), getEta()));
         sb.append(String.format("Price: %s\r\n", getTicketPrice()));
 
-        writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\data.txt", sb);
+        writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\data.txt", sb, false);
     }
 }
