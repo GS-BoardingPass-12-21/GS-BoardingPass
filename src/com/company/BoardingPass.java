@@ -5,6 +5,9 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -172,8 +175,9 @@ public class BoardingPass {
     }
 
     public void generateDataFile() throws IOException {
+        SimpleDateFormat fmt = new SimpleDateFormat("E M/d/y");
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format("Ticket Number: %s             Date: %s\r\n", getPassNumber(), getDate()));
+        sb.append(String.format("Ticket Number: %s             Date: %s\r\n", getPassNumber(), fmt.format(getDate())));
         sb.append(String.format("Name: %s                      Age: %s\r\n", getPassenger().getName(), getPassenger().getAge()));
         sb.append(String.format("Gender: %s                    Email: %s\r\n", getPassenger().getGender(), getPassenger().getEmail()));
         sb.append(String.format("Phone: %s\r\n", getPassenger().getPhone()));
