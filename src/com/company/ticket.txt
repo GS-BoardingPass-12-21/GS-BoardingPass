@@ -38,3 +38,13 @@
 * Price: 20.0            
 ***********************************************
 
+***********************************************
+* Ticket Number: 413c57e1-cf54-43dc-8d90-34c5141bc169             Date: Thu 12/30/2021 9:35:25 AM            
+* Name: Jason                      Age: 24            
+* Gender: Male                    Email: jason@test.com            
+* Phone: 814-455-1889            
+* Origin: Buffalo, NY                    Destination: Erie, PA            
+* Departure Time: 11:00 AM            ETA: 12:00 PM            
+* Price: 50.0            
+***********************************************
+

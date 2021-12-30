@@ -175,7 +175,7 @@ public class BoardingPass {
     }
 
     public void generateDataFile() throws IOException {
-        SimpleDateFormat fmt = new SimpleDateFormat("E M/d/y");
+        SimpleDateFormat fmt = new SimpleDateFormat("E M/d/y h:m:s a");
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("Ticket Number: %s             Date: %s\r\n", getPassNumber(), fmt.format(getDate())));
         sb.append(String.format("Name: %s                      Age: %s\r\n", getPassenger().getName(), getPassenger().getAge()));
