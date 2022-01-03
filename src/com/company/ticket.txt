@@ -1,50 +1,30 @@
 ***********************************************
-* Ticket Number: b6a9231d-74c2-43f0-952f-6b3725f00ebc             Date: Thu Dec 30 08:59:46 EST 2021            
-* Name: Darren                      Age: 10            
-* Gender: Male                    Email: darrentebo83@outlook.com            
-* Phone: 814-464-1587            
+* Ticket Number: 52748311-5b5d-4d99-94c3-70af17039a39             Date: Thu 12/30/2021 9:40:26 AM            
+* Name: Anne                      Age: 20            
+* Gender: Female                    Email: anne@test.com            
+* Phone: 814-464-1222            
+* Origin: Buffalo, NY                    Destination: Erie, PA            
+* Departure Time: 11:00 AM            ETA: 12:00 PM            
+* Price: 50.0            
+***********************************************
+
+***********************************************
+* Ticket Number: 9bebd1db-3ee9-45df-8829-6e5822ecf13b             Date: Thu 12/30/2021 9:41:4 AM            
+* Name: Jennifer                      Age: 60            
+* Gender: Female                    Email: jenn@test.com            
+* Phone: 814-444-1221            
+* Origin: Buffalo, NY                    Destination: Erie, PA            
+* Departure Time: 11:00 AM            ETA: 12:00 PM            
+* Price: 20.0            
+***********************************************
+
+***********************************************
+* Ticket Number: b6a1c357-75b1-471c-bdcd-518f29c6370a             Date: Thu 12/30/2021 9:41:52 AM            
+* Name: Samantha                      Age: 10            
+* Gender: Female                    Email: sam@test.com            
+* Phone: 814-888-1345            
 * Origin: Buffalo, NY                    Destination: Erie, PA            
 * Departure Time: 11:00 AM            ETA: 12:00 PM            
 * Price: 25.0            
-***********************************************
-
-***********************************************
-* Ticket Number: ce8b5b71-03b1-43f7-a137-1a2f5fc064fb             Date: Thu Dec 30 09:00:43 EST 2021            
-* Name: Darren                      Age: 60            
-* Gender: Male                    Email: darren@test.com            
-* Phone: 188-321-1234            
-* Origin: Buffalo, NY                    Destination: Erie, PA            
-* Departure Time: 11:00 AM            ETA: 12:00 PM            
-* Price: 20.0            
-***********************************************
-
-***********************************************
-* Ticket Number: 32536fd6-2f66-47d2-a106-26aa45b94cc6             Date: Thu 12 30, 2021            
-* Name: Jason                      Age: 24            
-* Gender: Male                    Email: jason@test.com            
-* Phone: 814-155-1221            
-* Origin: Buffalo, NY                    Destination: Erie, PA            
-* Departure Time: 11:00 AM            ETA: 12:00 PM            
-* Price: 50.0            
-***********************************************
-
-***********************************************
-* Ticket Number: f5b3d297-57c4-4b7e-a32e-bbd471ef4f22             Date: Thu 12/30/2021            
-* Name: John                      Age: 80            
-* Gender: Male                    Email: john@test.com            
-* Phone: 814-889-8890            
-* Origin: Buffalo, NY                    Destination: Erie, PA            
-* Departure Time: 11:00 AM            ETA: 12:00 PM            
-* Price: 20.0            
-***********************************************
-
-***********************************************
-* Ticket Number: 413c57e1-cf54-43dc-8d90-34c5141bc169             Date: Thu 12/30/2021 9:35:25 AM            
-* Name: Jason                      Age: 24            
-* Gender: Male                    Email: jason@test.com            
-* Phone: 814-455-1889            
-* Origin: Buffalo, NY                    Destination: Erie, PA            
-* Departure Time: 11:00 AM            ETA: 12:00 PM            
-* Price: 50.0            
 ***********************************************
 
