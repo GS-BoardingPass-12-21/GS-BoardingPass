@@ -1,14 +1,9 @@
 ***********************************************
-* 1ce5f780-399a-4faf-8526-1279b47738a4            
-* Wed Dec 29 09:38:29 EST 2021            
-* Darren            
-* 10            
-* Male            
-* darrentebo83@outlook.com            
-* 814-464-1587            
-* Buffalo, NY            
-* Erie, PA            
-* 11:00 AM            
-* 12:00 PM            
-* 25.0            
+* Ticket Number: 152c1080-34c5-4c29-b90a-07bc8c0b7024             Date: Mon Jan 03 00:15:55 CST 2022            
+* Name: Jeremy                      Age: 44            
+* Gender: Male                    Email: jeremy@email.com            
+* Phone: 123456789            
+* Origin: Buffalo, NY                    Destination: Erie, PA            
+* Departure Time: 11:00 AM            ETA: 12:00 PM            
+* Price: 50.0            
 ***********************************************
