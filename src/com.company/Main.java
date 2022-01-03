@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 	// write your code here
-        Passenger passenger1 = new Passenger();
+        com.company.Passenger passenger1 = new com.company.Passenger();
 
         //Prompt for passenger information
         System.out.println("Welcome to GenSpark Transportation!");
@@ -31,7 +31,7 @@ public class Main {
         System.out.println("Thank you so much for that information! Here is your boarding pass! Please wait while we prepare to begin boarding!");
 
         //Generate boarding pass and save it
-        BoardingPass bp = new BoardingPass(passenger1);
+        com.company.BoardingPass bp = new com.company.BoardingPass(passenger1);
 
         //TODO: Generate and save the pass
         bp.generateDataFile();
