@@ -1,0 +1,7 @@
+Ticket Number: 6879a510-4f83-486e-a966-20cb355ad05a             Date: Mon Jan 03 09:12:46 PST 2022
+Name: Rafi                      Age: 515
+Gender: M                    Email: Rafi@gmail.com
+Phone: 123-232-2321
+Origin: Buffalo, NY                    Destination: Erie, PA
+Departure Time: 11:00 AM            ETA: 12:00 PM
+Price: 20.0
