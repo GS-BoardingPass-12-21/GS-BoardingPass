@@ -1,7 +1,0 @@
-Ticket Number: b6a1c357-75b1-471c-bdcd-518f29c6370a             Date: Thu 12/30/2021 9:41:52 AM
-Name: Samantha                      Age: 10
-Gender: Female                    Email: sam@test.com
-Phone: 814-888-1345
-Origin: Buffalo, NY                    Destination: Erie, PA
-Departure Time: 11:00 AM            ETA: 12:00 PM
-Price: 25.0

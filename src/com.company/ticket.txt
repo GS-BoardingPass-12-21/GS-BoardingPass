@@ -28,3 +28,13 @@
 * Price: 25.0            
 ***********************************************
 
+***********************************************
+* Ticket Number: 2e958921-d032-4d78-b75a-272cb898f45c             Date: Mon 1/3/2022 2:53:48 PM            
+* Name: John                      Age: 34            
+* Gender: Male                    Email: john@test.com            
+* Phone: 188-332-1221            
+* Origin: Buffalo, NY                    Destination: Erie, PA            
+* Departure Time: 11:00 AM            ETA: 12:00 PM            
+* Price: 50.0            
+***********************************************
+

@@ -20,10 +20,10 @@ public class BoardingPass {
     private String destination;
     private String eta;
     private String departureTime;
-    private Passenger passenger;
+    private com.company.Passenger passenger;
     private double ticketPrice;
 
-    public BoardingPass(Passenger passenger) {
+    public BoardingPass(com.company.Passenger passenger) {
         this.passenger = passenger;
         this.ticketPrice = 50.00;
         setPassNumber(generatePassNumber());
@@ -43,11 +43,11 @@ public class BoardingPass {
         this.ticketPrice = ticketPrice;
     }
 
-    public Passenger getPassenger() {
+    public com.company.Passenger getPassenger() {
         return passenger;
     }
 
-    public void setPassenger(Passenger passenger) {
+    public void setPassenger(com.company.Passenger passenger) {
         this.passenger = passenger;
     }
 
