@@ -4,6 +4,10 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -16,10 +20,10 @@ public class BoardingPass {
     private String destination;
     private String eta;
     private String departureTime;
-    private Passenger passenger;
+    private com.company.Passenger passenger;
     private double ticketPrice;
 
-    public BoardingPass(Passenger passenger) {
+    public BoardingPass(com.company.Passenger passenger) {
         this.passenger = passenger;
         this.ticketPrice = 50.00;
         setPassNumber(generatePassNumber());
@@ -39,11 +43,11 @@ public class BoardingPass {
         this.ticketPrice = ticketPrice;
     }
 
-    public Passenger getPassenger() {
+    public com.company.Passenger getPassenger() {
         return passenger;
     }
 
-    public void setPassenger(Passenger passenger) {
+    public void setPassenger(com.company.Passenger passenger) {
         this.passenger = passenger;
     }
 
@@ -99,10 +103,15 @@ public class BoardingPass {
         return UUID.randomUUID().toString();
     }
 
-    public int writeToFile(String path, StringBuilder data) throws IOException {
+    public int writeToFile(String path, StringBuilder data, boolean append) throws IOException {
         int result = 0;
         try{
-            Files.write(Paths.get(path), data.toString().getBytes());
+            if(append){
+                Files.write(Paths.get(path), data.toString().getBytes(), StandardOpenOption.APPEND);
+            }
+            else{
+                Files.write(Paths.get(path), data.toString().getBytes());
+            }
         }
         catch(Exception ex){
             result = -1;
@@ -121,7 +130,7 @@ public class BoardingPass {
 
             StringBuilder ticket = generateTicket(lines);
 
-            writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\ticket.txt", ticket);
+            writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\ticket.txt", ticket, true);
         }
         catch(Exception ex){
             result = -1;
@@ -140,7 +149,7 @@ public class BoardingPass {
             ticketSb.append(String.format("* %s            \r\n", ticketLine));
         }
 
-        ticketSb.append("***********************************************");
+        ticketSb.append("***********************************************\r\n\r\n");
 
         return ticketSb;
     }
@@ -166,15 +175,16 @@ public class BoardingPass {
     }
 
     public void generateDataFile() throws IOException {
+        SimpleDateFormat fmt = new SimpleDateFormat("E M/d/y");
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format("Ticket Number: %s             Date: %s\r\n", getPassNumber(), getDate()));
-        sb.append(String.format("Name: %s                      Age: %o\r\n", getPassenger().getName(), getPassenger().getAge()));
+        sb.append(String.format("Ticket Number: %s             Date: %s\r\n", getPassNumber(), fmt.format(getDate())));
+        sb.append(String.format("Name: %s                      Age: %s\r\n", getPassenger().getName(), getPassenger().getAge()));
         sb.append(String.format("Gender: %s                    Email: %s\r\n", getPassenger().getGender(), getPassenger().getEmail()));
         sb.append(String.format("Phone: %s\r\n", getPassenger().getPhone()));
         sb.append(String.format("Origin: %s                    Destination: %s\r\n", getOrigin(), getDestination()));
         sb.append(String.format("Departure Time: %s            ETA: %s\r\n", getDepartureTime(), getEta()));
         sb.append(String.format("Price: %s\r\n", getTicketPrice()));
 
-        writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\data.txt", sb);
+        writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\data.txt", sb, false);
     }
 }
