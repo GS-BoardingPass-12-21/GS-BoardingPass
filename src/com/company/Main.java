@@ -19,7 +19,7 @@ public class Main {
         System.out.println(String.format("Thank you %s! How old are you? ", passenger1.getName()));
         passenger1.setAge(sc.nextInt());
 
-        System.out.println("Thank you! What is your gender? ");
+        System.out.println("Thank you! What is your gender? M/F ");
         passenger1.setGender(sc.next());
 
         System.out.println("And your phone number? ");
