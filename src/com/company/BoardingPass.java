@@ -130,7 +130,7 @@ public class BoardingPass {
 
             StringBuilder ticket = generateTicket(lines);
 
-            writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\ticket.txt", ticket, true);
+            writeToFile("/Users/rafiullahrahmati/Desktop/TeamProject/GS-BoardingPass/src/com/company/ticket.txt", ticket, true);
         }
         catch(Exception ex){
             result = -1;
@@ -184,7 +184,8 @@ public class BoardingPass {
         sb.append(String.format("Origin: %s                    Destination: %s\r\n", getOrigin(), getDestination()));
         sb.append(String.format("Departure Time: %s            ETA: %s\r\n", getDepartureTime(), getEta()));
         sb.append(String.format("Price: %s\r\n", getTicketPrice()));
+        writeToFile("/Users/rafiullahrahmati/Desktop/TeamProject/GS-BoardingPass/src/com/company/data.txt", sb, false);
 
-        writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\data.txt", sb, false);
+//        writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\data.txt", sb, false);
     }
 }

@@ -36,8 +36,15 @@ public class Main {
 
         //TODO: Generate and save the pass
         bp.generateDataFile();
+<<<<<<< Updated upstream
         bp.readDataFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\data.txt");
 
         //This is a comment
+=======
+        // Path For Mac
+        bp.readDataFile("/Users/rafiullahrahmati/Desktop/TeamProject/GS-BoardingPass/src/com/company/data.txt");
+        // Path For Windows
+//        bp.readDataFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\data.txt");
+>>>>>>> Stashed changes
     }
 }
