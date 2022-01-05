@@ -1,7 +1,7 @@
-Ticket Number: 37375eed-00ca-4f18-a3f3-9cb6f656a7a3             Date: Tue 1/4/2022
-Name: Liba Rafi                      Age: 2
-Gender: M                    Email: Rafi@gmail.com
-Phone: 232-233-2323
-Origin: Sac California                    Destination: SanDaiago California
-Departure Time: 23:00            ETA: 12:00 PM
+Ticket Number: 57958b36-a567-4d7b-870e-565391640608             Date: Wed 1/5/2022
+Name: Jennifer Ryan                      Age: 10
+Gender: F                    Email: jenn@test.com
+Phone: 877-334-5678
+Origin: Buffalo, NY                    Destination: Erie, PA
+Departure Time: 14:00            ETA: 12:00 PM
 Price: 25.0

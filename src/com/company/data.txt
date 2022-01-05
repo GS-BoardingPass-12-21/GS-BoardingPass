@@ -1,7 +1,7 @@
-Ticket Number: 087527a3-41ba-433b-b2f0-a68ffc50676f             Date: Tue 1/4/2022
-Name: Aga Khan                      Age: 66
-Gender: M                    Email: Jan@gmail.com
-Phone: 232-233-1212
-Origin: Sac California                    Destination: SanDiago California
+Ticket Number: 45ebfdb1-9683-4ad3-957c-18b0279e6b58             Date: Wed 1/5/2022
+Name: Jennifer Ryan                      Age: 10
+Gender: F                    Email: jenn@test.com
+Phone: 888-334-2211
+Origin: Buffalo, NY                    Destination: Erie, PA
 Departure Time: 12:00            ETA: 12:00 PM
-Price: 25.0
+Price: 18.75

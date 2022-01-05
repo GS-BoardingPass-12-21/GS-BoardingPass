@@ -25,7 +25,6 @@ public class BoardingPass {
         this.ticketPrice = 50.00;
         setPassNumber(generatePassNumber());
         setEta(generateETA());
-        setTicketPrice(generateTicketPrice());
         this.departureTime = "11:00 AM";
         this.date = new Date();
         this.destination = "Erie, PA";
@@ -155,14 +154,17 @@ public class BoardingPass {
 
     public double generateTicketPrice(){
         if(getPassenger().getAge() <= 12){
+            System.out.println("Age less than 12");
             setTicketPrice(getTicketPrice() - (getTicketPrice() * 0.5));
         }
 
         if(getPassenger().getAge() >= 60){
+            System.out.println("Age greater than 60");
             setTicketPrice(getTicketPrice() - (getTicketPrice() * 0.6));
         }
 
-        if(getPassenger().getGender() == "F"){
+        if(getPassenger().getGender().equals("F")){
+            System.out.println("Gender is female");
             setTicketPrice(getTicketPrice() - (getTicketPrice() * 0.25));
         }
 
@@ -174,6 +176,7 @@ public class BoardingPass {
     }
 
     public void generateDataFile() throws IOException {
+        setTicketPrice(generateTicketPrice());
         SimpleDateFormat fmt = new SimpleDateFormat("E M/d/y");
         StringBuilder sb = new StringBuilder();
         sb.append(String.format("Ticket Number: %s             Date: %s\r\n", getPassNumber(), fmt.format(getDate())));
