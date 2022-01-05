@@ -16,6 +16,7 @@ public class Passenger {
         this.phone = phone;
         this.gender = gender;
         this.age = age;
+
     }
 
     public String getName() {
@@ -57,4 +58,6 @@ public class Passenger {
     public void setAge(int age) {
         this.age = age;
     }
+
+
 }

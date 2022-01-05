@@ -1,7 +1,7 @@
-Ticket Number: 152c1080-34c5-4c29-b90a-07bc8c0b7024             Date: Mon Jan 03 00:15:55 CST 2022
-Name: Jeremy                      Age: 44
-Gender: Male                    Email: jeremy@email.com
-Phone: 123456789
-Origin: Buffalo, NY                    Destination: Erie, PA
-Departure Time: 11:00 AM            ETA: 12:00 PM
-Price: 50.0
+Ticket Number: 087527a3-41ba-433b-b2f0-a68ffc50676f             Date: Tue 1/4/2022
+Name: Aga Khan                      Age: 66
+Gender: M                    Email: Jan@gmail.com
+Phone: 232-233-1212
+Origin: Sac California                    Destination: SanDiago California
+Departure Time: 12:00            ETA: 12:00 PM
+Price: 25.0

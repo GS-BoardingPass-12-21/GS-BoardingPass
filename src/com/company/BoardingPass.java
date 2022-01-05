@@ -1,13 +1,10 @@
 package com.company;
 
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -129,8 +126,10 @@ public class BoardingPass {
             lines = Files.readAllLines(Paths.get(path));
 
             StringBuilder ticket = generateTicket(lines);
-
-            writeToFile("/Users/rafiullahrahmati/Desktop/TeamProject/GS-BoardingPass/src/com/company/ticket.txt", ticket, true);
+            // Path for Mac
+//            writeToFile("/Users/rafiullahrahmati/Desktop/TeamProject/GS-BoardingPass/src/com/company/ticket.txt", ticket, true);
+            // Path For Windows
+            writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\ticket.txt", ticket, true);
         }
         catch(Exception ex){
             result = -1;
@@ -143,13 +142,13 @@ public class BoardingPass {
     public StringBuilder generateTicket(List<String> ticketData){
         StringBuilder ticketSb = new StringBuilder();
 
-        ticketSb.append("***********************************************\r\n");
+        ticketSb.append("==============================================================================\r\n");
 
         for(String ticketLine: ticketData){
             ticketSb.append(String.format("* %s            \r\n", ticketLine));
         }
 
-        ticketSb.append("***********************************************\r\n\r\n");
+        ticketSb.append("==============================================================================\r\n\r\n");
 
         return ticketSb;
     }
@@ -163,7 +162,7 @@ public class BoardingPass {
             setTicketPrice(getTicketPrice() - (getTicketPrice() * 0.6));
         }
 
-        if(getPassenger().getGender() == "Female"){
+        if(getPassenger().getGender() == "F"){
             setTicketPrice(getTicketPrice() - (getTicketPrice() * 0.25));
         }
 
@@ -184,8 +183,10 @@ public class BoardingPass {
         sb.append(String.format("Origin: %s                    Destination: %s\r\n", getOrigin(), getDestination()));
         sb.append(String.format("Departure Time: %s            ETA: %s\r\n", getDepartureTime(), getEta()));
         sb.append(String.format("Price: %s\r\n", getTicketPrice()));
-        writeToFile("/Users/rafiullahrahmati/Desktop/TeamProject/GS-BoardingPass/src/com/company/data.txt", sb, false);
-
-//        writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\data.txt", sb, false);
+        // Path for Mac
+//        writeToFile("/Users/rafiullahrahmati/Desktop/TeamProject/GS-BoardingPass/src/com/company/data.txt", sb, false);
+        // Path For Windows
+        writeToFile("C:\\GenSpark\\TeamProjects\\GS-BoardingPass\\src\\com\\company\\data.txt", sb, false);
     }
 }
+
